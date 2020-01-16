@@ -1,0 +1,296 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/main_title_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/black">
+
+        <ImageButton
+            android:id="@+id/ReturnBtnMain"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:onClick="onReturn"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/ConnectStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/iarc"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+        <ImageButton
+            android:id="@+id/pointing_drawer_control_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="#ff000000"
+            android:src="@drawable/mission_other_icon" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_title_rl"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/imageV_OverlayV_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/takedPhoto_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:visibility="visible"
+                app:srcCompat="@drawable/mission_stop" />
+
+            <com.dji.P4MissionsDemo.tensorflow.OverlayView
+                android:id="@+id/DJI_tracking_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <TextureView
+            android:id="@+id/video_previewer_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_title_rl"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <SlidingDrawer
+        android:id="@+id/pointing_drawer_sd"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/main_title_rl"
+        android:content="@+id/pointing_drawer_content_rl"
+        android:handle="@+id/pointing_handle"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@id/pointing_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@id/pointing_drawer_content_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_title_rl"
+            android:layout_centerInParent="true">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ASR_push_tv"
+                        style="@style/test_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="@string/asr_push_info" />
+
+                    <TextView
+                        android:id="@+id/pointing_push_tv"
+                        style="@style/test_text"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="@string/push_info" />
+
+                    <TextView
+                        android:id="@+id/simulator_push_tv"
+                        style="@style/test_text"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="@string/simulator_push_info"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </ScrollView>
+
+
+
+        </RelativeLayout>
+    </SlidingDrawer>
+
+    <RelativeLayout
+        android:id="@+id/pointing_bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/main_title_rl">
+
+        <Button
+            android:id="@+id/pointing_start_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/pointing_start"
+            android:text="GO"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/pointing_rst_point_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/visual_point_now"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/pointing_stop_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnQuickConnect"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/mission_stop"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/pointing_assistant_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/textView"
+            android:text="simulator data" />
+
+        <Switch
+            android:id="@+id/pointing_assistant_sw"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/pointing_assistant_tv"
+            android:layout_below="@id/pointing_assistant_tv"
+            android:checked="false"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/wifi_connection_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/pointing_assistant_sw"
+            android:layout_toStartOf="@+id/textView"
+            android:text="wifi connection" />
+
+        <Switch
+            android:id="@+id/wifi_connection_sw"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/pointing_assistant_tv"
+            android:layout_below="@+id/wifi_connection_tv"
+            android:checked="false"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/asr_state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/wifi_connection_sw"
+            android:layout_toStartOf="@+id/textView"
+            android:text="asr state" />
+
+        <Switch
+            android:id="@+id/asr_state_sw"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/pointing_assistant_tv"
+            android:layout_below="@+id/asr_state_tv"
+            android:checked="false"
+            android:text="" />
+
+        <SeekBar
+            android:id="@+id/pointing_speed_sb"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:max="3"
+            android:progress="1" />
+
+        <Button
+            android:id="@+id/btnWifiConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Wifi Connection"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnQuickConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnWifiConnection"
+            android:text="quick connect"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/pointing_speed_sb"
+            android:paddingRight="40dp"
+            android:text="编号"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/pointing_speed_tv"
+            style="@style/test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/pointing_speed_sb"
+            android:text="语音命令"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

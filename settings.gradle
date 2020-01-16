@@ -1,0 +1,4 @@
+include ':P4MissionsDemo'
+
+include ':openCVLibrary2411'
+include ':openCVLibrary342'

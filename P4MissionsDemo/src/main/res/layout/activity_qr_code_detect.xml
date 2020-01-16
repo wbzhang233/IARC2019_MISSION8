@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".qrdetect.qrCodeDetect">
+
+    <RelativeLayout
+        android:id="@+id/qrcodedetect_layout_titlt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/qrcodeDetectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_activity_qrcodedeect_sample"
+            android:background="#000000"
+            android:textSize="21sp"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/qrcodedetect_layout_titlt"
+            android:layout_above="@+id/qrcodedetect_layout_btn">
+            <LinearLayout
+                android:id="@+id/layout_pics"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:id="@+id/frame1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/qrcode1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitStart"
+
+                        android:background="@drawable/imageview_border"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/qrcode4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitStart"
+                        android:padding="1dp"
+                        android:background="@drawable/imageview_border"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_pics2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:id="@+id/frame2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/qrcode2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitStart"
+                        android:padding="1dp"
+                        android:background="@drawable/imageview_border"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/qrcode3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitStart"
+                        android:padding="1dp"
+                        android:contentDescription="TODO"
+                        android:background="@drawable/imageview_border"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.8">
+            <FrameLayout
+                android:id="@+id/frame5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/qrcodeIntact1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:scaleType="fitStart"
+                    android:background="@drawable/text_radiu_border"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/qrcodeIntact2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:scaleType="fitStart"
+                    android:background="@drawable/text_radiu_border"/>
+            </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/frameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/textHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="程序提示"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/text_radiu_border"
+                        android:textColor="@color/colorWhite"
+                        />
+                    <TextView
+                        android:id="@+id/qrCodeHints"
+                        android:layout_below="@+id/textHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="false"
+                        android:background="@drawable/text_radiu_border"
+                        android:hint="程序重要提示将在此展示..."
+                        android:textColor="@color/colorWhite"
+                        android:scrollbars="vertical"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/qrcodedetect_layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/qrcodeStartDetectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始检测" />
+
+        <Button
+            android:id="@+id/qrcodeCaptureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrcodeStartDetectBtn"
+            android:layout_marginLeft="10dp"
+            android:text="拍照" />
+
+        <Button
+            android:id="@+id/qrcodeConfirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrcodeCaptureBtn"
+            android:layout_marginLeft="10dp"
+            android:text="确认" />
+
+        <Button
+            android:id="@+id/qrCodeOneKeyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrcodeConfirmBtn"
+            android:layout_marginLeft="10dp"
+            android:text="一键拼接" />
+
+        <Button
+            android:id="@+id/qrcodeSelectPathBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrCodeOneKeyBtn"
+            android:layout_marginLeft="50dp"
+            android:text="选择图片" />
+
+        <Button
+            android:id="@+id/qrcodeDisplayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrcodeSelectPathBtn"
+            android:layout_marginLeft="10dp"
+            android:text="查看" />
+
+        <Button
+            android:id="@+id/qrcodeDetectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrcodeDisplayBtn"
+            android:layout_marginLeft="10dp"
+            android:text="提取" />
+
+        <Button
+            android:id="@+id/qrcodeJointBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrcodeDetectBtn"
+            android:layout_marginLeft="10dp"
+            android:text="拼接" />
+
+        <Button
+            android:id="@+id/qrcodeDecodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/qrcodeJointBtn"
+            android:layout_marginLeft="10dp"
+            android:text="解码" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/P4MissionsDemo/P4MissionsDemo.iml" filepath="$PROJECT_DIR$/P4MissionsDemo/P4MissionsDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/P4MissionsDemo-0818.iml" filepath="$PROJECT_DIR$/P4MissionsDemo-0818.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary2411/openCVLibrary2411.iml" filepath="$PROJECT_DIR$/openCVLibrary2411/openCVLibrary2411.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary342/openCVLibrary342.iml" filepath="$PROJECT_DIR$/openCVLibrary342/openCVLibrary342.iml" />
+    </modules>
+  </component>
+</project>

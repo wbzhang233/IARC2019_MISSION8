@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">IARC2019 Mission8</string>
+    <string name="title_activity_pointing_test">TapFly Sample</string>
+    <string name="title_activity_tracking_test">Real-Time Tracking Sample</string>
+    <string name="push_info">real data Push Info</string>
+    <string name="title_activity_mainactivity">BUAA-Yuyuan Y</string>
+    <string name="demo_desc_tracking">Real-Time Tracking Mission</string>
+    <string name="demo_desc_pointing">TapFly Mission</string>
+    <string name="title_activity_simulating_test">Simulator Sample</string>
+    <string name="demo_desc_simulator">Simulator Mission</string>
+    <string name="title_activity_wifi_test">Speech Controller Client</string>
+    <string name="demo_desc_wifi">Speech Controller Mission</string>
+    <string name="title_activity_4to1_test">Four in one Test Sample</string>
+    <string name="WiFi_client_test">WiFi_Client_test</string>
+    <string name="wifi">WiFi client</string>
+    <string name="title_wifi_client">WiFi_Client</string>
+    <string name="simulator_push_info">simulator push info</string>
+    <string name="asr_push_info">asr push info</string>
+    <string name="asr_sample_title">ASR Sample</string>
+    <string name="title_asr">Asr Sample</string>
+    <string name="demo_desc_asr">from baidu</string>
+    <string name="start">开始</string>
+    <string name="setting">设置</string>
+    <string name="iarc">IARC2019</string>
+    <string name="central_system">Central System</string>
+    <string name="title_activity_Central_system">Central System</string>
+    <string name="demo_desc_central_system">Four In One Display Mission</string>
+    <string name="title_activity_Opencv_sample">OPENCV test Sample</string>
+    <string name="title_activity_qrcodedeect_sample">qrCode Task Dealer</string>
+    <string name="title_activity_qrjoint_sample">qrCodeJoint Test Sample</string>
+    <!--以下为二维码检测界面所用到的string-->
+
+</resources>
